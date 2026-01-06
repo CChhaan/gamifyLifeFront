@@ -1,23 +1,80 @@
 {
-	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
-		{
-			"path": "pages/index/index",
-			"style": {
-				"navigationBarTitleText": "首页",
-				"navigationStyle": "custom"
-			}
-		},
-		{
-			"path": "pages/login/login",
-			"style": {
-				"navigationBarTitleText": "login"
-			}
-		}
-	],
-	"globalStyle": {
-		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
-	}
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      // uni-ui 规则如下配置
+      "^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue"
+    }
+  },
+  "pages": [
+    //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "首页",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/login/login",
+      "style": {
+        "navigationBarTitleText": "login"
+      }
+    }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#666",
+    "selectedColor": "#fe7a24",
+    "fontSize": "28rpx",
+    "height": "140rpx",
+    "iconfontSrc": "static/icon/uniicons.ttf",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconfont": {
+          "color": "#666",
+          "selectedColor": "#fe7a24",
+          "text": "\ue662",
+          "selectedText": "\ue663"
+        }
+      },
+      {
+        "color": "#666",
+        "selectedColor": "#fe7a24",
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconfont": {
+          "text": "\ue662",
+          "selectedText": "\ue663"
+        }
+      },
+      {
+        "color": "#666",
+        "selectedColor": "#fe7a24",
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconfont": {
+          "text": "\ue662",
+          "selectedText": "\ue663"
+        }
+      },
+      {
+        "color": "#666",
+        "selectedColor": "#fe7a24",
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconfont": {
+          "text": "\ue662",
+          "selectedText": "\ue663"
+        }
+      }
+    ]
+  }
 }

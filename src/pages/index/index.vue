@@ -4,7 +4,7 @@
       <view class="info">
         <view class="left">
           <view class="avatar">
-            <text>头像</text>
+            <text></text>
           </view>
           <view class="center">
             <view class="username">
@@ -16,20 +16,18 @@
           </view>
         </view>
         <view class="more">
-          <button size="mini" plain="true" class="personal-more">查看详情</button>
+          <button size="mini" plain="true" class="personal-more">
+            查看详情
+          </button>
         </view>
       </view>
       <view class="exp">
         <view class="data">
           <view class="exp-data">
-            <text>
-              exp: 1000/2000
-            </text>
+            <text> exp: 1000/2000 </text>
           </view>
           <view class="gold-data">
-            <text>
-              $ 200
-            </text>
+            <text> $ 200 </text>
           </view>
         </view>
         <view class="exp-line">
@@ -62,31 +60,29 @@
     </view>
     <view class="card task-data">
       <view class="task-item">
-        <text class="task-item-text">完成 Vue 3 学习完成 Vue 3 学习 完成 Vue 3 学习</text>
-        <radio style="transform:scale(0.7)" />
+        <text class="task-item-text"
+          >完成 Vue 3 学习完成 Vue 3 学习 完成 Vue 3 学习</text
+        >
+        <radio style="transform: scale(0.7)" borderColor="#aaa" />
       </view>
       <view class="task-item">
         <text class="task-item-text">完成 Vue 3 学习</text>
-        <radio style="transform:scale(0.7)" />
+        <radio style="transform: scale(0.7)" borderColor="#aaa" />
       </view>
       <view class="task-item">
         <text class="task-item-text">完成 Vue 3 学习</text>
-        <radio style="transform:scale(0.7)" />
+        <radio style="transform: scale(0.7)" borderColor="#aaa" />
       </view>
       <view class="more">
         <button size="mini" class="task-more">查看更多</button>
       </view>
     </view>
-    <CustomTabbar />
     <FloatPet />
   </view>
 </template>
 
 <script setup lang="ts">
-import CustomTabbar from '@/components/CustomTabbar/CustomTabbar.vue';
-import FloatPet from '@/components/FloatPet.vue/FloatPet.vue';
-import { ref } from 'vue'
-const title = ref('Hello')
+import FloatPet from "@/components/FloatPet.vue/FloatPet.vue";
 </script>
 
 <style>
@@ -101,9 +97,9 @@ const title = ref('Hello')
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-bottom: 160rpx;
+  padding-bottom: 140rpx;
   height: 100vh;
-  background-color: #e9edf8;
+  background-color: #fef8e6;
 }
 
 .card {
@@ -133,9 +129,9 @@ const title = ref('Hello')
       align-items: center;
 
       .avatar {
-        width: 130rpx;
-        height: 130rpx;
-        background-color: skyblue;
+        width: 120rpx;
+        height: 120rpx;
+        background-color: #fe7a24;
         border-radius: 50%;
         display: flex;
         align-items: center;
@@ -172,7 +168,6 @@ const title = ref('Hello')
 
     .data {
       width: 100%;
-
       display: flex;
       justify-content: space-between;
       margin-bottom: 10rpx;
@@ -189,7 +184,7 @@ const title = ref('Hello')
       .now {
         width: 50%;
         height: 100%;
-        background-color: #3e7fe4;
+        background-color: #fe7a24;
         border-radius: 10rpx;
       }
     }
@@ -221,9 +216,10 @@ const title = ref('Hello')
 
   .task-category-item {
     border-radius: 20rpx;
-    background-color: #fff;
+    background-color: #fcfcfc;
     border-radius: 20rpx;
     font-size: 28rpx;
+    box-shadow: 0 6rpx 10rpx #ccc;
     padding: 20rpx;
   }
 
@@ -232,7 +228,7 @@ const title = ref('Hello')
   }
 
   .selected {
-    background-color: #3e7fe4;
+    background-color: #fe7a24;
     color: #fff;
   }
 
@@ -244,18 +240,17 @@ const title = ref('Hello')
 .task-data {
   margin-top: 20rpx;
   height: 35vh;
-  box-shadow: inset 0 0 0 10rpx #3e7fe4;
+  box-shadow: inset 0 0 0 10rpx #fe7a24cc;
 
   .task-item {
     padding: 20rpx;
-    border-bottom: 1rpx solid #eee;
+    border-bottom: 2rpx solid #ddd;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
 
     .task-item-text {
-      font-size: 28rpx;
       line-height: 1.5;
       white-space: nowrap;
       width: 85%;
@@ -268,9 +263,20 @@ const title = ref('Hello')
         display: inline-block;
         width: 10rpx;
         height: 28rpx;
-        background-color: #3e7fe4;
+        background-color: #fe7a24;
         margin-right: 20rpx;
       }
+    }
+  }
+  .more {
+    margin-top: 30rpx;
+    text-align: center;
+    font-size: 28rpx;
+    .task-more {
+      background-color: #fe7a24;
+      color: #fff;
+      border-radius: 20rpx;
+      font-size: 28rpx;
     }
   }
 }

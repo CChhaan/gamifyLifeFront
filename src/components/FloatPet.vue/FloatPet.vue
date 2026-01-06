@@ -1,20 +1,20 @@
 <template>
   <div class="float-pet">
-    float-pet
+    <image
+      style="width: 200rpx; height: 250rpx"
+      src="../../static/pet_baby.png"
+      mode="aspectFit"
+    />
   </div>
 </template>
 
-<script setup lang="ts">
-
-</script>
+<script setup lang="ts"></script>
 
 <style scoped>
 .float-pet {
   position: fixed;
-  background-color: #ffd04a;
-  bottom: 200rpx;
-  right: 50rpx;
-  width: 100rpx;
-  height: 100rpx;
+  z-index: 1000;
+  bottom: 130rpx;
+  right: 0rpx;
 }
 </style>
