@@ -4,7 +4,9 @@
       <view class="info">
         <view class="left">
           <view class="avatar">
-            <text></text>
+            <image class="avatar-img"
+              src="https://p9-passport.byteacctimg.com/img/mosaic-legacy/3796/2975850990~120x256.image"
+              mode="scaleToFill" />
           </view>
           <view class="center">
             <view class="username">
@@ -35,10 +37,34 @@
         </view>
       </view>
       <view class="attr-data">
-        <view class="attr-item">心智：20</view>
-        <view class="attr-item">体魄：20</view>
-        <view class="attr-item">社交：20</view>
-        <view class="attr-item">自律：20</view>
+        <view class="attr-item">
+          <view class="attr-item-name">
+            <image src="/static/imgs/brain.png" class="attr-item-icon" />
+            <text>心智</text>
+          </view>
+          <text>20</text>
+        </view>
+        <view class="attr-item">
+          <view class="attr-item-name">
+            <image src="/static/imgs/strength.png" class="attr-item-icon" />
+            <text>体魄</text>
+          </view>
+          <text>20</text>
+        </view>
+        <view class="attr-item">
+          <view class="attr-item-name">
+            <image src="/static/imgs/communication.png" class="attr-item-icon" />
+            <text>社交</text>
+          </view>
+          <text>20</text>
+        </view>
+        <view class="attr-item">
+          <view class="attr-item-name">
+            <image src="/static/imgs/hourglass.png" class="attr-item-icon" />
+            <text>自律</text>
+          </view>
+          <text>20</text>
+        </view>
       </view>
     </view>
     <view class="task-category">
@@ -59,19 +85,27 @@
       </view>
     </view>
     <view class="card task-data">
-      <view class="task-item">
-        <text class="task-item-text"
-          >完成 Vue 3 学习完成 Vue 3 学习 完成 Vue 3 学习</text
-        >
-        <radio style="transform: scale(0.7)" borderColor="#aaa" />
-      </view>
-      <view class="task-item">
-        <text class="task-item-text">完成 Vue 3 学习</text>
-        <radio style="transform: scale(0.7)" borderColor="#aaa" />
-      </view>
-      <view class="task-item">
-        <text class="task-item-text">完成 Vue 3 学习</text>
-        <radio style="transform: scale(0.7)" borderColor="#aaa" />
+      <view class="tasks">
+        <view class="task-item">
+          <text class="task-item-text">完成 Vue 3 学习完成 Vue 3 学习 完成 Vue 3 学习</text>
+          <radio style="transform: scale(0.7)" borderColor="#aaa" />
+        </view>
+        <view class="task-item">
+          <text class="task-item-text">完成 Vue 3 学习</text>
+          <radio style="transform: scale(0.7)" borderColor="#aaa" />
+        </view>
+        <view class="task-item">
+          <text class="task-item-text">完成 Vue 3 学习</text>
+          <radio style="transform: scale(0.7)" borderColor="#aaa" />
+        </view>
+        <view class="task-item">
+          <text class="task-item-text">完成 Vue 3 学习</text>
+          <radio style="transform: scale(0.7)" borderColor="#aaa" />
+        </view>
+        <view class="task-item">
+          <text class="task-item-text">完成 Vue 3 学习</text>
+          <radio style="transform: scale(0.7)" borderColor="#aaa" />
+        </view>
       </view>
       <view class="more">
         <button size="mini" class="task-more">查看更多</button>
@@ -104,7 +138,7 @@ import FloatPet from "@/components/FloatPet.vue/FloatPet.vue";
 
 .card {
   background-color: #fff;
-  width: 80vw;
+  width: 85vw;
   border-radius: 20rpx;
   box-shadow: 0 6rpx 10rpx #ccc;
   padding: 30rpx;
@@ -116,7 +150,6 @@ import FloatPet from "@/components/FloatPet.vue/FloatPet.vue";
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 50rpx;
 
   .info {
     width: 100%;
@@ -131,15 +164,21 @@ import FloatPet from "@/components/FloatPet.vue/FloatPet.vue";
       .avatar {
         width: 120rpx;
         height: 120rpx;
-        background-color: #fe7a24;
+        /* background-color: #fe7a24; */
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
+
+        .avatar-img {
+          width: 120rpx;
+          height: 120rpx;
+          border-radius: 50%;
+        }
       }
 
       .center {
-        margin-left: 20rpx;
+        margin-left: 30rpx;
         font-size: 36rpx;
 
         .username {
@@ -195,24 +234,42 @@ import FloatPet from "@/components/FloatPet.vue/FloatPet.vue";
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 10rpx;
+    gap: 20rpx;
 
     .attr-item {
-      font-size: 28rpx;
+      /* font-size: 38rpx; */
       width: 47%;
-      padding: 10rpx;
-      /* border: 1px solid #ddd; */
+      padding: 10rpx 20rpx;
+      border-radius: 10rpx;
+      box-shadow: 0 4rpx 10rpx #ccc;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20rpx;
+
+      .attr-item-name {
+        display: flex;
+        align-items: center;
+        gap: 15rpx;
+
+        .attr-item-icon {
+          width: 45rpx;
+          height: 45rpx;
+        }
+      }
     }
   }
 }
 
 .task-category {
-  width: 80vw;
+  width: 85vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
   overflow: auto;
   gap: 15rpx;
+  padding: 20rpx 0;
+  margin: 20rpx 0;
 
   .task-category-item {
     border-radius: 20rpx;
@@ -238,9 +295,21 @@ import FloatPet from "@/components/FloatPet.vue/FloatPet.vue";
 }
 
 .task-data {
-  margin-top: 20rpx;
   height: 35vh;
-  box-shadow: inset 0 0 0 10rpx #fe7a24cc;
+  /* box-shadow: inset 0 0 0 10rpx #fe7a24cc; */
+  border-top: 14rpx solid #fe7a24cc;
+  padding-top: 10rpx;
+  padding-bottom: 15rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  .tasks {
+    height: 80%;
+    width: 100%;
+    overflow: auto;
+  }
 
   .task-item {
     padding: 20rpx;
@@ -268,15 +337,21 @@ import FloatPet from "@/components/FloatPet.vue/FloatPet.vue";
       }
     }
   }
+
   .more {
-    margin-top: 30rpx;
+    /* margin: 15rpx; */
     text-align: center;
     font-size: 28rpx;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     .task-more {
       background-color: #fe7a24;
       color: #fff;
       border-radius: 20rpx;
-      font-size: 28rpx;
+      font-size: 30rpx;
     }
   }
 }

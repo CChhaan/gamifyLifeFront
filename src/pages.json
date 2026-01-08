@@ -48,31 +48,31 @@
       {
         "color": "#666",
         "selectedColor": "#fe7a24",
-        "pagePath": "pages/index/index",
-        "text": "首页",
+        "pagePath": "pages/task/task",
+        "text": "任务",
         "iconfont": {
-          "text": "\ue662",
-          "selectedText": "\ue663"
+          "text": "\ue6a0",
+          "selectedText": "\ue6a1"
         }
       },
       {
         "color": "#666",
         "selectedColor": "#fe7a24",
-        "pagePath": "pages/index/index",
-        "text": "首页",
+        "pagePath": "pages/community/community",
+        "text": "社区",
         "iconfont": {
-          "text": "\ue662",
-          "selectedText": "\ue663"
+          "text": "\ue696",
+          "selectedText": "\ue697"
         }
       },
       {
         "color": "#666",
         "selectedColor": "#fe7a24",
-        "pagePath": "pages/index/index",
-        "text": "首页",
+        "pagePath": "pages/personal/personal",
+        "text": "个人中心",
         "iconfont": {
-          "text": "\ue662",
-          "selectedText": "\ue663"
+          "text": "\ue699",
+          "selectedText": "\ue700"
         }
       }
     ]
